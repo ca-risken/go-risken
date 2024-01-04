@@ -205,7 +205,7 @@ func structToQueryParams(s interface{}) url.Values {
 			for j := 0; j < fieldValue.Len(); j++ {
 				params.Add(jsonName, fmt.Sprintf("%v", fieldValue.Index(j)))
 			}
-		case reflect.String, reflect.Uint32, reflect.Int32, reflect.Uint64, reflect.Float32:
+		case reflect.String, reflect.Int, reflect.Uint32, reflect.Int32, reflect.Uint64, reflect.Float32, reflect.Float64, reflect.Bool:
 			// Add more types as needed
 			if fieldValue.Interface() != reflect.Zero(fieldValue.Type()).Interface() {
 				params.Add(jsonName, fmt.Sprintf("%v", fieldValue.Interface()))
