@@ -1,0 +1,81 @@
+# API Client Generator Configuration
+# refs: https://github.com/ca-risken/gateway/blob/master/router.go
+
+# Finding
+- file: finding.go
+  package: github.com/ca-risken/core/proto/finding
+  apis:
+    - name: ListFinding
+      method: GET
+      endpoint: /api/v1/finding/list-finding
+    - name: GetFinding
+      method: GET
+      endpoint: /api/v1/finding/get-finding
+    - name: ListFindingTag
+      method: GET
+      endpoint: /api/v1/finding/list-finding-tag
+    - name: ListFindingTagName
+      method: GET
+      endpoint: /api/v1/finding/list-finding-tag-name
+    - name: ListResource
+      method: GET
+      endpoint: /api/v1/finding/list-resource
+    - name: ListResourceTag
+      method: GET
+      endpoint: /api/v1/finding/list-resource-tag
+    - name: ListResourceTagName
+      method: GET
+      endpoint: /api/v1/finding/list-resource-tag-name
+    - name: GetResource
+      method: GET
+      endpoint: /api/v1/finding/get-resource
+    - name: GetPendFinding
+      method: GET
+      endpoint: /api/v1/finding/get-pend-finding
+    - name: ListFindingSetting
+      method: GET
+      endpoint: /api/v1/finding/list-finding-setting
+    - name: GetRecommend
+      method: GET
+      endpoint: /api/v1/finding/get-recommend
+    - name: GetAISummary
+      method: GET
+      endpoint: /api/v1/finding/get-ai-summary
+    - name: PutFinding
+      method: POST
+      endpoint: /api/v1/finding/put-finding
+    - name: DeleteFinding
+      method: POST
+      endpoint: /api/v1/finding/delete-finding
+      noResponse: true
+    - name: TagFinding
+      method: POST
+      endpoint: /api/v1/finding/tag-finding
+    - name: UntagFinding
+      method: POST
+      endpoint: /api/v1/finding/untag-finding
+      noResponse: true
+    - name: PutResource
+      method: POST
+      endpoint: /api/v1/finding/put-resource
+    - name: DeleteResource
+      method: POST
+      endpoint: /api/v1/finding/delete-resource
+      noResponse: true
+    - name: PutPendFinding
+      method: POST
+      endpoint: /api/v1/finding/put-pend-finding
+    - name: DeletePendFinding
+      method: POST
+      endpoint: /api/v1/finding/delete-pend-finding
+      noResponse: true
+    - name: PutFindingSetting
+      method: POST
+      endpoint: /api/v1/finding/put-finding-setting
+    - name: DeleteFindingSetting
+      method: POST
+      endpoint: /api/v1/finding/delete-finding-setting
+      noResponse: true
+    - name: PutRecommend
+      method: POST
+      endpoint: /api/v1/finding/put-recommend
