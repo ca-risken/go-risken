@@ -88,7 +88,6 @@ func (c *Client) checkResponse(resp *http.Response, err error) (*http.Response, 
 func (c *Client) getErrorFromResponse(resp *http.Response) APIError {
 	// check whether the error response is declared as JSON
 	if !strings.HasPrefix(resp.Header.Get("Content-Type"), "application/json") {
-		c.logger.Info("DEBUG", slog.Int("debug-point", 1))
 		defer resp.Body.Close()
 		aerr := APIError{
 			Status:  resp.StatusCode,
@@ -96,19 +95,15 @@ func (c *Client) getErrorFromResponse(resp *http.Response) APIError {
 		}
 		return aerr
 	}
-	c.logger.Info("DEBUG", slog.Int("debug-point", 2))
 
-	var document APIError
+	aerr := APIError{}
+	aerr.Status = resp.StatusCode
 	// because of above check this probably won't fail, but it's possible...
-	if err := decodeBody(resp, &document); err != nil {
-		aerr := APIError{
-			Status:  resp.StatusCode,
-			Message: fmt.Sprintf("HTTP response with status code %d, JSON error object decode failed: %s", resp.StatusCode, err),
-		}
+	if err := decodeBody(resp, &aerr); err != nil {
+		aerr.Message = fmt.Sprintf("HTTP response with status code %d, JSON error object decode failed: %s", resp.StatusCode, err)
 		return aerr
 	}
-	document.Status = resp.StatusCode
-	return document
+	return aerr
 }
 
 type APIError struct {
