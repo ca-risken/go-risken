@@ -51,3 +51,11 @@ diagnosis-example:
 .PHONY: code-example
 code-example:
 	go run examples/code/main.go
+
+.PHONY: google-example
+google-example:
+	go run examples/google/main.go
+
+.PHONY: datasource-example
+datasource-example:
+	go run examples/datasource/main.go

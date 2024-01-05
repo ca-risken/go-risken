@@ -445,3 +445,43 @@
       method: POST
       endpoint: /api/v1/code/invoke-scan-code-scan
       noResponse: true
+
+# Google
+- file: google.go
+  package: github.com/ca-risken/datasource-api/proto/google
+  apis:
+    - name: ListGoogleDataSource
+      method: GET
+      endpoint: /api/v1/google/list-google-datasource
+    - name: ListGCP
+      method: GET
+      endpoint: /api/v1/google/list-gcp
+    - name: GetGCPDataSource
+      method: GET
+      endpoint: /api/v1/google/get-gcp-datasource
+    - name: PutGCP
+      method: POST
+      endpoint: /api/v1/google/put-gcp
+    - name: DeleteGCP
+      method: POST
+      endpoint: /api/v1/google/delete-gcp
+      noResponse: true
+    - name: AttachGCPDataSource
+      method: POST
+      endpoint: /api/v1/google/attach-gcp-datasource
+    - name: DetachGCPDataSource
+      method: POST
+      endpoint: /api/v1/google/detach-gcp-datasource
+      noResponse: true
+    - name: InvokeScanGCP
+      method: POST
+      endpoint: /api/v1/google/invoke-scan-gcp
+      noResponse: true
+
+# DataSource
+- file: datasource.go
+  package: github.com/ca-risken/datasource-api/proto/datasource
+  apis:
+    - name: AnalyzeAttackFlow
+      method: GET
+      endpoint: /api/v1/datasource/get-attack-flow-analysis
