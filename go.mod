@@ -4,6 +4,7 @@ go 1.21.3
 
 require (
 	github.com/ca-risken/core v0.10.1-0.20231207084139-adc99d9a725b
+	github.com/ca-risken/datasource-api v0.10.0
 	github.com/google/go-cmp v0.5.9
 	gopkg.in/yaml.v3 v3.0.1
 )

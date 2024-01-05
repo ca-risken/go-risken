@@ -3,6 +3,8 @@ github.com/asaskevich/govalidator v0.0.0-20210307081110-f21760c49a8d h1:Byv0BzEl
 github.com/asaskevich/govalidator v0.0.0-20210307081110-f21760c49a8d/go.mod h1:WaHUgvxTVq04UNunO+XhnAqY/wQc+bxr74GqbsZ/Jqw=
 github.com/ca-risken/core v0.10.1-0.20231207084139-adc99d9a725b h1:Up1aZb1yYed4gS+DWL9BsGNG7Ljg6CIW90GkO93THiU=
 github.com/ca-risken/core v0.10.1-0.20231207084139-adc99d9a725b/go.mod h1:6OB1QgAz4vMn5lzzRn1F8YWqQwZPrL8inD2mnr9Bvo4=
+github.com/ca-risken/datasource-api v0.10.0 h1:Nf7S4n640mno2UseZrlgcXtfAqnJfhuJScDH8ypgKwo=
+github.com/ca-risken/datasource-api v0.10.0/go.mod h1:ALnhUjHxCmyI6daaJF3Obi6lV5nIZatlISYFuWFybDE=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=

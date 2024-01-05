@@ -35,3 +35,7 @@ alert-example:
 .PHONY: report-example
 report-example:
 	go run examples/report/main.go
+
+.PHONY: aws-example
+aws-example:
+	go run examples/aws/main.go
