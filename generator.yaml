@@ -477,3 +477,11 @@
       method: POST
       endpoint: /api/v1/google/invoke-scan-gcp
       noResponse: true
+
+# DataSource
+- file: datasource.go
+  package: github.com/ca-risken/datasource-api/proto/datasource
+  apis:
+    - name: AnalyzeAttackFlow
+      method: GET
+      endpoint: /api/v1/datasource/get-attack-flow-analysis

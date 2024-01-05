@@ -55,3 +55,7 @@ code-example:
 .PHONY: google-example
 google-example:
 	go run examples/google/main.go
+
+.PHONY: datasource-example
+datasource-example:
+	go run examples/datasource/main.go
