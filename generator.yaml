@@ -165,3 +165,82 @@
       method: POST
       endpoint: /api/v1/project/untag-project
       noResponse: true
+
+# Alert
+- file: alert.go
+  package: github.com/ca-risken/core/proto/alert
+  apis:
+    - name: ListAlert
+      method: GET
+      endpoint: /api/v1/alert/list-alert
+    - name: ListAlertHistory
+      method: GET
+      endpoint: /api/v1/alert/list-history
+    - name: ListRelAlertFinding
+      method: GET
+      endpoint: /api/v1/alert/list-rel_alert_finding
+    - name: ListAlertCondition
+      method: GET
+      endpoint: /api/v1/alert/list-condition
+    - name: ListAlertRule
+      method: GET
+      endpoint: /api/v1/alert/list-rule
+    - name: ListAlertCondRule
+      method: GET
+      endpoint: /api/v1/alert/list-condition_rule
+    - name: ListNotification
+      method: GET
+      endpoint: /api/v1/alert/list-notification
+    - name: ListAlertCondNotification
+      method: GET
+      endpoint: /api/v1/alert/list-condition_notification
+    - name: PutAlert
+      method: POST
+      endpoint: /api/v1/alert/put-alert
+    - name: PutAlertFirstViewedAt
+      method: POST
+      endpoint: /api/v1/alert/put-alert-first-viewed-at
+      noResponse: true
+    - name: PutAlertCondition
+      method: POST
+      endpoint: /api/v1/alert/put-condition
+    - name: PutAlertRule
+      method: POST
+      endpoint: /api/v1/alert/put-rule
+    - name: PutAlertCondRule
+      method: POST
+      endpoint: /api/v1/alert/put-condition_rule
+    - name: PutNotification
+      method: POST
+      endpoint: /api/v1/alert/put-notification
+    - name: PutAlertCondNotification
+      method: POST
+      endpoint: /api/v1/alert/put-condition_notification
+    - name: DeleteAlertCondition
+      method: POST
+      endpoint: /api/v1/alert/delete-condition
+      noResponse: true
+    - name: DeleteAlertRule
+      method: POST
+      endpoint: /api/v1/alert/delete-rule
+      noResponse: true
+    - name: DeleteAlertCondRule
+      method: POST
+      endpoint: /api/v1/alert/delete-condition_rule
+      noResponse: true
+    - name: DeleteNotification
+      method: POST
+      endpoint: /api/v1/alert/delete-notification
+      noResponse: true
+    - name: DeleteAlertCondNotification
+      method: POST
+      endpoint: /api/v1/alert/delete-condition_notification
+      noResponse: true
+    - name: AnalyzeAlert
+      method: POST
+      endpoint: /api/v1/alert/analyze-alert
+      noResponse: true
+    - name: TestNotification
+      method: POST
+      endpoint: /api/v1/alert/test-notification
+      noResponse: true

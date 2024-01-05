@@ -27,3 +27,7 @@ iam-example:
 .PHONY: project-example
 project-example:
 	go run examples/project/main.go
+
+.PHONY: alert-example
+alert-example:
+	go run examples/alert/main.go
