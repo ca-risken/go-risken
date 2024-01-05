@@ -252,3 +252,32 @@
     - name: GetReportFinding
       method: GET
       endpoint: /api/v1/report/get-report
+
+# AWS
+- file: aws.go
+  package: github.com/ca-risken/datasource-api/proto/aws
+  apis:
+    - name: ListAWS
+      method: GET
+      endpoint: /api/v1/aws/list-aws
+    - name: ListDataSource
+      method: GET
+      endpoint: /api/v1/aws/list-datasource
+    - name: PutAWS
+      method: POST
+      endpoint: /api/v1/aws/put-aws
+    - name: DeleteAWS
+      method: POST
+      endpoint: /api/v1/aws/delete-aws
+      noResponse: true
+    - name: InvokeScan
+      method: POST
+      endpoint: /api/v1/aws/invoke-scan
+      noResponse: true
+    - name: AttachDataSource
+      method: POST
+      endpoint: /api/v1/aws/attach-datasource
+    - name: DetachDataSource
+      method: POST
+      endpoint: /api/v1/aws/detach-datasource
+      noResponse: true
