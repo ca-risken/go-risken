@@ -23,3 +23,7 @@ finding-example:
 .PHONY: iam-example
 iam-example:
 	go run examples/iam/main.go
+
+.PHONY: project-example
+project-example:
+	go run examples/project/main.go

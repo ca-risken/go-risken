@@ -143,3 +143,25 @@
       method: POST
       endpoint: /api/v1/iam/delete-user-reserved
       noResponse: true
+
+# Project
+- file: project.go
+  package: github.com/ca-risken/core/proto/project
+  apis:
+    - name: ListProject
+      method: GET
+      endpoint: /api/v1/project/list-project
+    - name: UpdateProject
+      method: POST
+      endpoint: /api/v1/project/update-project
+    - name: DeleteProject
+      method: POST
+      endpoint: /api/v1/project/delete-project
+      noResponse: true
+    - name: TagProject
+      method: POST
+      endpoint: /api/v1/project/tag-project
+    - name: UntagProject
+      method: POST
+      endpoint: /api/v1/project/untag-project
+      noResponse: true
