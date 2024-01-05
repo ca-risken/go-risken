@@ -281,3 +281,49 @@
       method: POST
       endpoint: /api/v1/aws/detach-datasource
       noResponse: true
+
+# OSINT
+- file: osint.go
+  package: github.com/ca-risken/datasource-api/proto/osint
+  apis:
+    - name: ListOsint
+      method: GET
+      endpoint: /api/v1/osint/list-osint
+    - name: ListOsintDataSource
+      method: GET
+      endpoint: /api/v1/osint/list-datasource
+    - name: ListRelOsintDataSource
+      method: GET
+      endpoint: /api/v1/osint/list-rel-datasource
+    - name: ListOsintDetectWord
+      method: GET
+      endpoint: /api/v1/osint/list-word
+    - name: GetOsint
+      method: GET
+      endpoint: /api/v1/osint/get-osint
+    - name: InvokeScan
+      method: POST
+      endpoint: /api/v1/osint/invoke-scan
+      noResponse: true
+      methodName: InvokeScanOsint
+    - name: PutOsint
+      method: POST
+      endpoint: /api/v1/osint/put-osint
+    - name: DeleteOsint
+      method: POST
+      endpoint: /api/v1/osint/delete-osint
+      noResponse: true
+    - name: PutRelOsintDataSource
+      method: POST
+      endpoint: /api/v1/osint/put-rel-datasource
+    - name: DeleteRelOsintDataSource
+      method: POST
+      endpoint: /api/v1/osint/delete-rel-datasource
+      noResponse: true
+    - name: PutOsintDetectWord
+      method: POST
+      endpoint: /api/v1/osint/put-word
+    - name: DeleteOsintDetectWord
+      method: POST
+      endpoint: /api/v1/osint/delete-word
+      noResponse: true
