@@ -244,3 +244,11 @@
       method: POST
       endpoint: /api/v1/alert/test-notification
       noResponse: true
+
+# Report
+- file: report.go
+  package: github.com/ca-risken/core/proto/report
+  apis:
+    - name: GetReportFinding
+      method: GET
+      endpoint: /api/v1/report/get-report
