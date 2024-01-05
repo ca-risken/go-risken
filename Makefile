@@ -39,3 +39,7 @@ report-example:
 .PHONY: aws-example
 aws-example:
 	go run examples/aws/main.go
+
+.PHONY: osint-example
+osint-example:
+	go run examples/osint/main.go

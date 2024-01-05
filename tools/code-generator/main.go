@@ -28,7 +28,7 @@ import (
 )
 {{range .APIs}}
 {{- if not .NoResponse }}
-func (c *Client) {{.Name}}(ctx context.Context, req *proto.{{.Name}}Request) (*proto.{{.Name}}Response, error) {
+func (c *Client) {{if .MethodName}}{{.MethodName}}{{else}}{{.Name}}{{end}}(ctx context.Context, req *proto.{{.Name}}Request) (*proto.{{.Name}}Response, error) {
 	httpReq, err := c.NewRequest(ctx, "{{.Method}}", "{{.Endpoint}}", req)
 	if err != nil {
 		return nil, err
@@ -44,7 +44,7 @@ func (c *Client) {{.Name}}(ctx context.Context, req *proto.{{.Name}}Request) (*p
 	return &resp, nil
 }
 {{- else}}
-func (c *Client) {{.Name}}(ctx context.Context, req *proto.{{.Name}}Request) error {
+func (c *Client) {{if .MethodName}}{{.MethodName}}{{else}}{{.Name}}{{end}}(ctx context.Context, req *proto.{{.Name}}Request) error {
 	httpReq, err := c.NewRequest(ctx, "{{.Method}}", "{{.Endpoint}}", req)
 	if err != nil {
 		return err
@@ -72,6 +72,7 @@ type API struct {
 	Method     string `yaml:"method"`
 	Endpoint   string `yaml:"endpoint"`
 	NoResponse bool   `yaml:"noResponse,omitempty"`
+	MethodName string `yaml:"methodName,omitempty"`
 }
 
 func main() {
