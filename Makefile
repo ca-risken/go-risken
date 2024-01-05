@@ -43,3 +43,7 @@ aws-example:
 .PHONY: osint-example
 osint-example:
 	go run examples/osint/main.go
+
+.PHONY: diagnosis-example
+diagnosis-example:
+	go run examples/diagnosis/main.go

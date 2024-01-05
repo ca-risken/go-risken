@@ -327,3 +327,66 @@
       method: POST
       endpoint: /api/v1/osint/delete-word
       noResponse: true
+
+# Diagnosis
+- file: diagnosis.go
+  package: github.com/ca-risken/datasource-api/proto/diagnosis
+  apis:
+    - name: ListWpscanSetting
+      method: GET
+      endpoint: /api/v1/diagnosis/list-wpscan-setting
+    - name: ListPortscanSetting
+      method: GET
+      endpoint: /api/v1/diagnosis/list-portscan-setting
+    - name: ListPortscanTarget
+      method: GET
+      endpoint: /api/v1/diagnosis/list-portscan-target
+    - name: ListApplicationScan
+      method: GET
+      endpoint: /api/v1/diagnosis/list-application-scan
+    - name: GetApplicationScanBasicSetting
+      method: GET
+      endpoint: /api/v1/diagnosis/get-application-scan-basic-setting
+    - name: GetDiagnosisDataSource
+      method: GET
+      endpoint: /api/v1/diagnosis/get-datasource
+    - name: InvokeScan
+      method: POST
+      endpoint: /api/v1/diagnosis/invoke-scan
+      noResponse: true
+      methodName: InvokeScanDiagnosis
+    - name: PutWpscanSetting
+      method: POST
+      endpoint: /api/v1/diagnosis/put-wpscan-setting
+    - name: DeleteWpscanSetting
+      method: POST
+      endpoint: /api/v1/diagnosis/delete-wpscan-setting
+      noResponse: true
+    - name: PutApplicationScan
+      method: POST
+      endpoint: /api/v1/diagnosis/put-application-scan
+    - name: DeleteApplicationScan
+      method: POST
+      endpoint: /api/v1/diagnosis/delete-application-scan
+      noResponse: true
+    - name: PutApplicationScanBasicSetting
+      method: POST
+      endpoint: /api/v1/diagnosis/put-application-scan-basic-setting
+    - name: DeleteApplicationScanBasicSetting
+      method: POST
+      endpoint: /api/v1/diagnosis/delete-application-scan-basic-setting
+      noResponse: true
+    - name: PutPortscanSetting
+      method: POST
+      endpoint: /api/v1/diagnosis/put-portscan-setting
+    - name: PutPortscanTarget
+      method: POST
+      endpoint: /api/v1/diagnosis/put-portscan-target
+    - name: DeletePortscanSetting
+      method: POST
+      endpoint: /api/v1/diagnosis/delete-portscan-setting
+      noResponse: true
+    - name: DeletePortscanTarget
+      method: POST
+      endpoint: /api/v1/diagnosis/delete-portscan-target
+      noResponse: true
