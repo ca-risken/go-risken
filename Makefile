@@ -47,3 +47,7 @@ osint-example:
 .PHONY: diagnosis-example
 diagnosis-example:
 	go run examples/diagnosis/main.go
+
+.PHONY: code-example
+code-example:
+	go run examples/code/main.go

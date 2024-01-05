@@ -390,3 +390,58 @@
       method: POST
       endpoint: /api/v1/diagnosis/delete-portscan-target
       noResponse: true
+
+# Code
+- file: code.go
+  package: github.com/ca-risken/datasource-api/proto/code
+  apis:
+    - name: ListDataSource
+      method: GET
+      endpoint: /api/v1/code/list-datasource
+      methodName: ListCodeDataSource
+    - name: ListGitHubSetting
+      method: GET
+      endpoint: /api/v1/code/list-github-setting
+    - name: ListGitleaksCache
+      method: GET
+      endpoint: /api/v1/code/list-gitleaks-cache
+    - name: PutGitHubSetting
+      method: POST
+      endpoint: /api/v1/code/put-github-setting
+    - name: DeleteGitHubSetting
+      method: POST
+      endpoint: /api/v1/code/delete-github-setting
+      noResponse: true
+    - name: PutGitleaksSetting
+      method: POST
+      endpoint: /api/v1/code/put-gitleaks-setting
+    - name: DeleteGitleaksSetting
+      method: POST
+      endpoint: /api/v1/code/delete-gitleaks-setting
+      noResponse: true
+    - name: PutDependencySetting
+      method: POST
+      endpoint: /api/v1/code/put-dependency-setting
+    - name: DeleteDependencySetting
+      method: POST
+      endpoint: /api/v1/code/delete-dependency-setting
+      noResponse: true
+    - name: PutCodeScanSetting
+      method: POST
+      endpoint: /api/v1/code/put-code-scan-setting
+    - name: DeleteCodeScanSetting
+      method: POST
+      endpoint: /api/v1/code/delete-code-scan-setting
+      noResponse: true
+    - name: InvokeScanGitleaks
+      method: POST
+      endpoint: /api/v1/code/invoke-scan-gitleaks
+      noResponse: true
+    - name: InvokeScanDependency
+      method: POST
+      endpoint: /api/v1/code/invoke-scan-dependency
+      noResponse: true
+    - name: InvokeScanCodeScan
+      method: POST
+      endpoint: /api/v1/code/invoke-scan-code-scan
+      noResponse: true
