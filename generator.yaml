@@ -79,3 +79,67 @@
     - name: PutRecommend
       method: POST
       endpoint: /api/v1/finding/put-recommend
+
+# IAM
+- file: iam.go
+  package: github.com/ca-risken/core/proto/iam
+  apis:
+    - name: ListUser
+      method: GET
+      endpoint: /api/v1/iam/list-user
+    - name: GetUser
+      method: GET
+      endpoint: /api/v1/iam/get-user
+    - name: ListRole
+      method: GET
+      endpoint: /api/v1/iam/list-role
+    - name: GetRole
+      method: GET
+      endpoint: /api/v1/iam/get-role
+    - name: ListPolicy
+      method: GET
+      endpoint: /api/v1/iam/list-policy
+    - name: GetPolicy
+      method: GET
+      endpoint: /api/v1/iam/get-policy
+    - name: ListAccessToken
+      method: GET
+      endpoint: /api/v1/iam/list-access-token
+    - name: ListUserReserved
+      method: GET
+      endpoint: /api/v1/iam/list-user-reserved
+    - name: PutRole
+      method: POST
+      endpoint: /api/v1/iam/put-role
+    - name: DeleteRole
+      method: POST
+      endpoint: /api/v1/iam/delete-role
+      noResponse: true
+    - name: AttachRole
+      method: POST
+      endpoint: /api/v1/iam/attach-role
+    - name: DetachRole
+      method: POST
+      endpoint: /api/v1/iam/detach-role
+      noResponse: true
+    - name: PutPolicy
+      method: POST
+      endpoint: /api/v1/iam/put-policy
+    - name: DeletePolicy
+      method: POST
+      endpoint: /api/v1/iam/delete-policy
+      noResponse: true
+    - name: AttachPolicy
+      method: POST
+      endpoint: /api/v1/iam/attach-policy
+    - name: DetachPolicy
+      method: POST
+      endpoint: /api/v1/iam/detach-policy
+      noResponse: true
+    - name: PutUserReserved
+      method: POST
+      endpoint: /api/v1/iam/put-user-reserved
+    - name: DeleteUserReserved
+      method: POST
+      endpoint: /api/v1/iam/delete-user-reserved
+      noResponse: true

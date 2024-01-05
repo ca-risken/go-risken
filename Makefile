@@ -19,3 +19,7 @@ generate:
 .PHONY: finding-example
 finding-example:
 	go run examples/finding/main.go
+
+.PHONY: iam-example
+iam-example:
+	go run examples/iam/main.go
