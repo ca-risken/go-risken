@@ -31,3 +31,7 @@ project-example:
 .PHONY: alert-example
 alert-example:
 	go run examples/alert/main.go
+
+.PHONY: report-example
+report-example:
+	go run examples/report/main.go
