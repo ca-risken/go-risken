@@ -21,17 +21,16 @@ import (
 	"github.com/ca-risken/go-risken"
 )
 
-var logger = slog.New(slog.NewJSONHandler(os.Stdout, nil))
-
 func main() {
 	ctx := context.Background()
 	token := os.Getenv("RISKEN_API_TOKEN") // Retrieve api token from environment value.
 	client := risken.NewClient(token, risken.WithAPIEndpoint("http://your-risken-api-endpoint"))
+
 	resp, err := client.Signin(ctx)
 	if err != nil {
-		logger.Error(err.Error())
+		slog.Error(err.Error())
 		os.Exit(1)
 	}
-	logger.Info("Success signin API.", slog.Any("resp", resp))
+	slog.Info("Success signin API.", slog.Any("resp", resp))
 }
 ```
