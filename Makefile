@@ -16,6 +16,10 @@ generate:
 	go generate ./...
 	go run tools/code-generator/main.go
 
+.PHONY: signin-example
+signin-example:
+	go run examples/signin/main.go
+
 .PHONY: finding-example
 finding-example:
 	go run examples/finding/main.go
