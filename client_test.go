@@ -42,16 +42,16 @@ func TestCheckResponse(t *testing.T) {
 			wantErr: errors.New("error calling the API endpoint: 500 Error"),
 		},
 		{
-			name: "404 Error(Unexpected Content-Type)",
+			name: "401 Error(Unexpected Content-Type)",
 			args: args{
 				resp: &httptest.ResponseRecorder{
-					Code: 404,
-					Body: bytes.NewBuffer([]byte(`{"status":404,"error":"404 Not Found"}`)),
+					Code: 401,
+					Body: bytes.NewBuffer([]byte(`{"status":401,"error":"401 Unauthorized"}`)),
 				},
 				err: nil,
 			},
 			want:    nil,
-			wantErr: errors.New("HTTP response with status code 404 does not contain Content-Type: application/json"),
+			wantErr: errors.New("HTTP response with status code 401"),
 		},
 		{
 			name: "404 Error(API Error)",
