@@ -91,7 +91,7 @@ func (c *Client) getErrorFromResponse(resp *http.Response) APIError {
 		defer resp.Body.Close()
 		aerr := APIError{
 			Status:  resp.StatusCode,
-			Message: fmt.Sprintf("HTTP response with status code %d does not contain Content-Type: application/json", resp.StatusCode),
+			Message: fmt.Sprintf("HTTP response with status code %d", resp.StatusCode),
 		}
 		return aerr
 	}
