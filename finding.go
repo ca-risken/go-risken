@@ -8,22 +8,6 @@ import (
 	proto "github.com/ca-risken/core/proto/finding"
 )
 
-func (c *Client) ListFinding(ctx context.Context, req *proto.ListFindingRequest) (*proto.ListFindingResponse, error) {
-	httpReq, err := c.NewRequest(ctx, "GET", "/api/v1/finding/list-finding", req)
-	if err != nil {
-		return nil, err
-	}
-	httpResp, err := c.Do(httpReq)
-	if err != nil {
-		return nil, err
-	}
-	var resp proto.ListFindingResponse
-	if err := decodeBodyWithDataKey(httpResp, &resp); err != nil {
-		return nil, err
-	}
-	return &resp, nil
-}
-
 func (c *Client) GetFinding(ctx context.Context, req *proto.GetFindingRequest) (*proto.GetFindingResponse, error) {
 	httpReq, err := c.NewRequest(ctx, "GET", "/api/v1/finding/get-finding", req)
 	if err != nil {
