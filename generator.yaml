@@ -5,9 +5,9 @@
 - file: finding.go
   package: github.com/ca-risken/core/proto/finding
   apis:
-    - name: ListFinding
-      method: GET
-      endpoint: /api/v1/finding/list-finding
+    # - name: ListFinding
+    #   method: GET
+    #   endpoint: /api/v1/finding/list-finding
     - name: GetFinding
       method: GET
       endpoint: /api/v1/finding/get-finding
@@ -170,9 +170,9 @@
 - file: alert.go
   package: github.com/ca-risken/core/proto/alert
   apis:
-    - name: ListAlert
-      method: GET
-      endpoint: /api/v1/alert/list-alert
+    # - name: ListAlert
+    #   method: GET
+    #   endpoint: /api/v1/alert/list-alert
     - name: ListAlertHistory
       method: GET
       endpoint: /api/v1/alert/list-history
