@@ -24,6 +24,8 @@ func (c *Client) ListAlert(ctx context.Context, req *proto.ListAlertRequest) (*p
 				query.Set("status", "3") // deactive
 			}
 		}
+	} else {
+		query.Set("status", "1") // active
 	}
 	httpReq.URL.RawQuery = query.Encode()
 	httpResp, err := c.Do(httpReq)
