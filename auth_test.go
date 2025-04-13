@@ -18,7 +18,10 @@ func TestSignin(t *testing.T) {
 			setup: func(server *httptest.Server) {
 				server.Config.Handler = http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 					w.Header().Set("Content-Type", "application/json")
-					w.Write([]byte(`{"project_id": 1, "access_token_id": 1}`))
+					_, err := w.Write([]byte(`{"project_id": 1, "access_token_id": 1}`))
+					if err != nil {
+						t.Fatalf("failed to write response: %v", err)
+					}
 				})
 			},
 			wantErr: false,
