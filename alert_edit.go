@@ -17,15 +17,15 @@ func (c *Client) ListAlert(ctx context.Context, req *proto.ListAlertRequest) (*p
 		for _, status := range req.Status {
 			switch status {
 			case proto.Status_ACTIVE:
-				query.Add("status", "1") // active
+				query.Set("status", "1") // active
 			case proto.Status_PENDING:
-				query.Add("status", "2") // pending
+				query.Set("status", "2") // pending
 			case proto.Status_DEACTIVE:
-				query.Add("status", "3") // deactive
-			default:
-				query.Add("status", "1") // active
+				query.Set("status", "3") // deactive
 			}
 		}
+	} else {
+		query.Set("status", "1") // active
 	}
 	httpReq.URL.RawQuery = query.Encode()
 	httpResp, err := c.Do(httpReq)
