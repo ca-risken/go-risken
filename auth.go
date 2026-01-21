@@ -6,9 +6,10 @@ import (
 )
 
 type SigninResponse struct {
-	ProjectID      uint32 `json:"project_id,omitempty"`
-	AccessTokenID  uint32 `json:"access_token_id,omitempty"`
-	OrganizationID uint32 `json:"organization_id,omitempty"`
+	ProjectID        uint32 `json:"project_id,omitempty"`
+	AccessTokenID    uint32 `json:"access_token_id,omitempty"`
+	OrganizationID   uint32 `json:"organization_id,omitempty"`
+	OrgAccessTokenID uint32 `json:"org_access_token_id,omitempty"`
 }
 
 func (c *Client) Signin(ctx context.Context) (*SigninResponse, error) {
