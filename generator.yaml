@@ -8,6 +8,9 @@
     # - name: ListFinding
     #   method: GET
     #   endpoint: /api/v1/finding/list-finding
+    # - name: ListFindingForOrg
+    #   method: GET
+    #   endpoint: /api/v1/finding/list-finding-for-organization
     - name: GetFinding
       method: GET
       endpoint: /api/v1/finding/get-finding
@@ -485,3 +488,11 @@
     - name: AnalyzeAttackFlow
       method: GET
       endpoint: /api/v1/datasource/get-attack-flow-analysis
+
+# Organization
+- file: organization.go
+  package: github.com/ca-risken/core/proto/organization
+  apis:
+    - name: ListOrganization
+      method: GET
+      endpoint: /api/v1/organization/list-organization
