@@ -8,7 +8,6 @@ import (
 	proto "github.com/ca-risken/core/proto/alert"
 )
 
-
 func (c *Client) ListAlertHistory(ctx context.Context, req *proto.ListAlertHistoryRequest) (*proto.ListAlertHistoryResponse, error) {
 	httpReq, err := c.NewRequest(ctx, "GET", "/api/v1/alert/list-history", req)
 	if err != nil {
